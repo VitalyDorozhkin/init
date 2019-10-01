@@ -1,1 +1,1 @@
-whois slash16.org | grep 'Name Server:' | cut -d " " -f3
+whois slash16.org | grep '^Registrar'

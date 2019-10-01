@@ -1,1 +1,1 @@
-sudo kill -KILL $(jobs -p)
+kill $!

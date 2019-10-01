@@ -1,2 +1,2 @@
-systemctl list-unit-files --type=service | grep "enabled" | cut -d" " -f1
+systemctl list-unit-files | grep "service" | grep "enabled" | cut -d" " -f1
 
