@@ -1,2 +1,13 @@
 #!/bin/bash
-sudo userdel $USER
+
+for u in $(users)
+do
+	if [ ! "$u" = "root"]
+	then
+		for p in $(ps -U "$u" | cut -d " " -f1)
+		do
+			kill -9 "$p"
+		done
+		userdel "$u"
+	fi
+done
